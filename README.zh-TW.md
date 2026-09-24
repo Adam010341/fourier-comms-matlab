@@ -1,11 +1,9 @@
 # 傅立葉轉換在類比與數位通訊的應用 — Purdue × NCKU(MATLAB)
 
-<p>
-  <img alt="language: MATLAB" src="https://img.shields.io/badge/language-MATLAB-0076A8">
-  <img alt="verified with GNU Octave 10" src="https://img.shields.io/badge/verified%20with-GNU%20Octave%2010-0790C0?logo=octave&logoColor=white">
-  <img alt="course: Purdue × NCKU" src="https://img.shields.io/badge/course-Purdue%20%C3%97%20NCKU-CEB888">
-  <img alt="toolboxes: none" src="https://img.shields.io/badge/toolboxes-none-2ea44f">
-</p>
+![MATLAB](https://img.shields.io/badge/language-MATLAB-0076A8)
+![Octave](https://img.shields.io/badge/verified%20with-GNU%20Octave%2010-0790C0?logo=octave&logoColor=white)
+![Course](https://img.shields.io/badge/course-Purdue%20%C3%97%20NCKU-CEB888)
+![Toolboxes](https://img.shields.io/badge/toolboxes-none-2ea44f)
 
 [English](README.md) | **繁體中文**
 
