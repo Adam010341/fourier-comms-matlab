@@ -30,14 +30,14 @@ Elmore Family School of Electrical and Computer Engineering.
   [`radio1.wav`](project3-am-radio/radio1.wav) and [`radio2.wav`](project3-am-radio/radio2.wav).
   [`AMDSB.m`](project3-am-radio/AMDSB.m) and [`AMSSB.m`](project3-am-radio/AMSSB.m) tune in to one
   channel with a band-pass filter, a local carrier and a low-pass filter.
-- We recorded impulse responses of a library room and a stairwell. The stairwell's sound energy
-  takes about twice as long to fall by 20 dB (0.37 s vs 0.18 s).
+- We recorded impulse responses in a library room and a stairwell. Sound energy in the stairwell
+  needs about twice as long to drop 20 dB (0.37 s vs 0.18 s).
 - No Signal Processing Toolbox. Low-pass filters are `2B·sinc(2Bt)` impulse responses, band-pass
-  filters are the difference of two low-pass filters, and filtering is FFT-based convolution.
+  filters are two low-pass filters subtracted, and filtering is FFT convolution.
 
 ## Verification
 
-Scripts were re-run in GNU Octave 10.3 and compared with the originally submitted files:
+Re-ran everything in GNU Octave 10.3 and compared against the files we originally submitted:
 
 - `mainFunction.m`, `cmd1.m`, `cmd2.m`: output WAVs identical sample for sample.
 - `AMDSB(1..3)`, `AMSSB(1..6)`: each output matches its source clip and no other (|corr| < 0.02);
@@ -47,11 +47,10 @@ Scripts were re-run in GNU Octave 10.3 and compared with the originally submitte
 
 ## Running the code
 
-Each folder is self-contained: `cd` into it in MATLAB and follow its README. Only base MATLAB is
-used. A few task scripts call `xline`/`yline` (R2018b or later).
+Each folder is self-contained. `cd` into it in MATLAB and follow its README. Base MATLAB only. A few task scripts call `xline`/`yline` (R2018b or later).
 
 Course-provided input audio (`x1.wav`, and `x1`–`x6` for project 3) is not redistributed.
-`radio1.wav` and `radio2.wav` are included, so the AM receivers run as-is.
+`radio1.wav` and `radio2.wav` are included, so the AM receivers run without it.
 
 ## Credits
 

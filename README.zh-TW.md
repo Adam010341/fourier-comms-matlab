@@ -8,7 +8,7 @@
 [English](README.md) | **繁體中文**
 
 這裡收錄的是成大課程 **傅立葉轉換在類比與數位通訊的應用**(*Applications of Fourier
-Transforms on Analog and Digital Communications*,課號 1142_E222400)的 MATLAB 專題。這是成大與
+Transforms on Analog and Digital Communications*,課號 1142_E222400)的 MATLAB 專題。這門課是成大和
 Purdue 合辦的短期課程(2026 年 4–5 月),由**普渡大學 Elmore Family School of ECE 的王之群教授
 (Prof. Chih-Chun Wang)** 全英文授課。
 
@@ -28,15 +28,15 @@ Purdue 合辦的短期課程(2026 年 4–5 月),由**普渡大學 Elmore Family
 - [`cmd1.m`](project3-am-radio/cmd1.m)、[`cmd2.m`](project3-am-radio/cmd2.m) 把 3 個 DSB 頻道與
   6 個 SSB 頻道(1 個基頻 + 5 個下旁帶)分別合成到
   [`radio1.wav`](project3-am-radio/radio1.wav) 和 [`radio2.wav`](project3-am-radio/radio2.wav)。
-  [`AMDSB.m`](project3-am-radio/AMDSB.m)、[`AMSSB.m`](project3-am-radio/AMSSB.m) 經過帶通濾波、
-  乘上本地載波、再低通濾波,收聽任一台。
+  [`AMDSB.m`](project3-am-radio/AMDSB.m)、[`AMSSB.m`](project3-am-radio/AMSSB.m) 先帶通濾波,
+  乘上本地載波,再低通濾波,就能收到任一台。
 - 我們錄了圖書館小房間和樓梯間的脈衝響應。樓梯間聲能衰減 20 dB 需要 0.37 秒,約為圖書館(0.18 秒)的兩倍。
-- 沒有用 Signal Processing Toolbox。低通濾波器寫成 `2B·sinc(2Bt)` 脈衝響應,帶通是兩個低通相減,
+- 沒用 Signal Processing Toolbox。低通濾波器寫成 `2B·sinc(2Bt)` 脈衝響應,帶通是兩個低通相減,
   濾波用 FFT 摺積。
 
 ## 驗證
 
-程式以 GNU Octave 10.3 重新執行,並與當初繳交的檔案比對:
+用 GNU Octave 10.3 重跑一遍,和當初繳交的檔案比對:
 
 - `mainFunction.m`、`cmd1.m`、`cmd2.m`:輸出 WAV 逐 sample 相同。
 - `AMDSB(1..3)`、`AMSSB(1..6)`:每台都對到正確來源,與其他來源 |相關係數| < 0.02;DSB 對正確來源 ≥ 0.998。
@@ -49,7 +49,7 @@ Purdue 合辦的短期課程(2026 年 4–5 月),由**普渡大學 Elmore Family
 有幾個 task 用到 `xline`/`yline`,需要 R2018b 以上。
 
 課程提供的原始音檔(project 1 的 `x1.wav`、project 3 的 `x1`–`x6`)沒有重新散布。
-`radio1.wav` / `radio2.wav` 已附在 repo 裡,AM 接收端可直接執行。
+`radio1.wav` / `radio2.wav` 已附在 repo 裡,AM 接收端不用它們也能跑。
 
 ## 致謝
 
